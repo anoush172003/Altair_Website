@@ -1,0 +1,50 @@
+Altair- Chatbot – Temporary Report
+-	Key requirements:
+1.	Dataset built from scratch
+2.	Image generation
+3.	Chatbot for effective communication
+4.	Good interactive UI
+-	Dataset features:
+1.	Various categories of products
+2.	Time taken for each product
+3.	Price per product
+4.	Minimum wage/hour
+5.	Yarn required for each product
+6.	Type of yarn
+7.	Price of each type of yarn
+-	Mathematical relationship: Minimum Wage* Number of hours taken + Yarn Prices 
+-	Working of the model:
+o	Folder structure:
+•	Crochet Project: 
+o	Chatbot
+o	Data
+o	Generation
+o	NLP
+o	Dataset (Temporary for training): This is a dataset with 61 rows, with each row having a customer message, per say, “Crochet panda plushie around 25cm”. 
+The dataset has types of products, their height, the width, the colors and certain characters.
+o	Generator model:
+	This is a stable diffusion image generator that creates clean e commerce style crochet products from a text prompt
+	Imports: 
+•	 os: used to create folders and manage file paths.
+•	datetime: used to generate unique timestamps for filenames.
+•	Torch: PyTorch, required for Stable Diffusion model execution.
+•	StableDiffusionPipeline: the Diffusers library pipeline that loads SD and generates images.
+	Creates a folder for generated images
+	Loads the SD model from HuggingFace which runs on cpu
+	Requirements:
+- handmade crochet product
+ 	- isolated object
+- full product clearly visible
+- centered composition
+- clean white background
+
+o	NLP model:
+	Pandas, torch + nn, DistilBERT, LabelEncoder are imported
+	Convert characters and product labels into numerical values
+	Tokenize text using DistilBERT- which outputs a 768-dimensional embedding per sentence
+	Adam optimizer and MSEloss
+	uses DistilBERT to convert text into an embedding and then predicts, product + size + colors + character from the embedding.
+
+
+				 
+
