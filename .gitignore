@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+
+# Virtual environments
+venv/
+
+# Environment secrets
+.env
+
+# Generated outputs
+Generation/generated_images/
+
+# ML model weights (VERY IMPORTANT)
+*.pt
+*.bin
+*.ckpt
+*.safetensors
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db

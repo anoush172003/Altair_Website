@@ -1,0 +1,17 @@
+torch
+transformers
+diffusers
+accelerate
+safetensors
+pillow
+
+spacy
+pandas
+numpy
+scikit-learn
+joblib
+
+tqdm
+datasets
+
+python-dotenv
